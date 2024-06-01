@@ -19,7 +19,7 @@ const assetName = 'Test Asset2';
 const assetName1 = 'Test Asset3';
 const assetName2 = 'Test Asset4';
 const assetName3 = 'Test Asset5';
-const url = 'apps/cumulocity-device-registration-widget/index.html#/';
+const url = 'apps/cumulocity-device-enrolment-widget/index.html#/';
 const searchResultsElement = 'c8y-list-group span';
 const strongTextElement = "c8y-ui-empty-state p[class*='text-medium']";
 const checkboxElement = "input[type='checkbox']";

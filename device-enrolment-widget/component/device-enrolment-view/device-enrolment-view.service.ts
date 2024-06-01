@@ -10,7 +10,7 @@ interface RegistrationResponse {
 }
 
 @Injectable()
-export class AssetPropertiesViewService {
+export class DeviceEnrolmentViewService {
   constructor(
     private c8yApi: FetchClient,
   ) {}

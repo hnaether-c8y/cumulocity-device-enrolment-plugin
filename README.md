@@ -1,4 +1,4 @@
-# Cumulocity Asset Properties Widget Plugin [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-asset-properties-widget/releases/download/cumulocity-device-registration-widget-1.0.1/cumulocity-device-registration-widget-1.0.1.zip)
+# Cumulocity Asset Properties Widget Plugin [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-device-enrolment-widget/releases/download/cumulocity-device-enrolment-widget-1.0.1/cumulocity-device-enrolment-widget-1.0.1.zip)
 
 This Asset Properties Widget is the Cumulocity module federation plugin created using c8ycli. This plugin can be used in Application Builder or Cockpit. It fetches Inventory data based on the Asset or Devices and displays the same in a widget.
 

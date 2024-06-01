@@ -1,8 +1,8 @@
-import { AssetPropertiesViewService } from './asset-properties-view.service';
+import { DeviceEnrolmentViewService } from './device-enrolment-view.service';
 import { of } from 'rxjs';
 
-describe('AssetPropertiesViewService', () => {
-  let service: AssetPropertiesViewService;
+describe('DeviceEnrolmentViewService', () => {
+  let service: DeviceEnrolmentViewService;
   let c8yApiMock: any;
 
   const response = {
@@ -24,7 +24,7 @@ describe('AssetPropertiesViewService', () => {
   beforeEach(async () => {
     c8yApiMock = { list: jest.fn() };
 
-    service = new AssetPropertiesViewService(
+    service = new DeviceEnrolmentViewService(
       c8yApiMock,
     );
   });

@@ -1,9 +1,9 @@
-import { AssetPropertiesViewComponent } from './asset-properties-view.component';
+import { DeviceEnrolmentViewComponent } from './device-enrolment-view.component';
 import { of } from 'rxjs';
 
-describe('AssetPropertiesViewComponent', () => {
+describe('DeviceEnrolmentViewComponent', () => {
   const date = new Date();
-  let component: AssetPropertiesViewComponent;
+  let component: DeviceEnrolmentViewComponent;
   let inventoryMock: any;
   let assetPropertiesServiceMock: any;
   let clipboardServiceMock: any;
@@ -18,7 +18,7 @@ describe('AssetPropertiesViewComponent', () => {
     };
     jest.useFakeTimers();
 
-    component = new AssetPropertiesViewComponent(
+    component = new DeviceEnrolmentViewComponent(
       inventoryMock,
       assetPropertiesServiceMock,
       clipboardServiceMock,

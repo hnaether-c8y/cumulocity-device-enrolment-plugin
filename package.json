@@ -1,14 +1,14 @@
 {
-  "name": "cumulocity-asset-properties-widget-plugin",
-  "version": "1.1.0",
-  "description": "Asset properties",
-  "author": "Amarjyoti Raj - Software AG, IOT-Apps R&D",
+  "name": "cumulocity-device-enrolment-widget-plugin",
+  "version": "1.0.0",
+  "description": "Device enrolment",
+  "author": "Reuben Miller - thin-edge.io",
   "license": "Apache 2.0",
   "scripts": {
     "clean": "yarn clean:dist && yarn clean:node_modules",
     "clean:dist": "rimraf dist packages/*/dist",
     "clean:node_modules": "rimraf packages/*/node_modules modules/node_modules node_modules",
-    "start": "c8ycli server --domain localhost",
+    "start": "C8Y_DOMAIN= c8ycli server",
     "build": "c8ycli build --env.mode=production",
     "deploy": "c8ycli deploy",
     "test": "jest",
@@ -79,11 +79,11 @@
   },
   "c8y": {
     "application": {
-      "name": "Device registration widget",
-      "description": "Device registration widget",
-      "contextPath": "cumulocity-device-registration-widget",
-      "key": "cumulocity-device-registration-widget-application-key",
-      "globalTitle": "Device registration widget",
+      "name": "Device enrolment widget",
+      "description": "Device enrolment widget",
+      "contextPath": "cumulocity-device-enrolment-widget",
+      "key": "cumulocity-device-enrolment-widget-application-key",
+      "globalTitle": "Device enrolment widget",
       "tabsHorizontal": true,
       "isPackage": true,
       "noAppSwitcher": true,
@@ -92,15 +92,15 @@
       "contentSecurityPolicy": "base-uri 'none'; default-src 'self' 'unsafe-inline' http: https: ws: wss: blob:; connect-src 'self' *.aptrinsic.com *.billwerk.com http: https: ws: wss: blob:;  script-src 'self' open.mapquestapi.com *.twitter.com *.twimg.com *.aptrinsic.com 'unsafe-inline' 'unsafe-eval' data:; style-src * 'unsafe-inline' blob:; img-src * data: blob:; font-src * data:; frame-src *; worker-src 'self' blob:;",
       "exports": [
         {
-          "name": "Cumulocity Device registration plugin",
-          "module": "DeviceRegistrationWidgetModule",
-          "path": "./asset-properties-widget/asset-properties-widget.module.ts",
-          "description": "Asset properties configuration widget"
+          "name": "Cumulocity Device Enrolement plugin",
+          "module": "DeviceEnrolmentWidgetModule",
+          "path": "./device-enrolment-widget/device-enrolment-widget.module.ts",
+          "description": "Device enrolment widget"
         }
       ],
       "remotes": {
-        "cumulocity-device-registration-widget": [
-          "DeviceRegistrationWidgetModule"
+        "cumulocity-device-enrolment-widget": [
+          "DeviceEnrolmentWidgetModule"
         ]
       }
     },

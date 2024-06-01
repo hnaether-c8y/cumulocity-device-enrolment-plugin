@@ -3,7 +3,7 @@ name: Widget build skip
 on:
   pull_request:
     paths-ignore:
-      - asset-properties-widget/**
+      - device-enrolment-widget/**
     branches:
       - develop
 

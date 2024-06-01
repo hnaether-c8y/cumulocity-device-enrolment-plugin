@@ -10,20 +10,20 @@ on:
 
   push:
     paths:
-      - asset-properties-widget/**
+      - device-enrolment-widget/**
     branches:
       - develop
 
 env:
-  APP_CONTEXT_PATH: "cumulocity-device-registration-widget"
+  APP_CONTEXT_PATH: "cumulocity-device-enrolment-widget"
 
 jobs:
   build-widget:
     uses: ./.github/workflows/build-widget.yml
     with:
       build_command: "yarn build"
-      app_file_name_prefix: "cumulocity-device-registration-widget"
-      app_context_path: "cumulocity-device-registration-widget"
+      app_file_name_prefix: "cumulocity-device-enrolment-widget"
+      app_context_path: "cumulocity-device-enrolment-widget"
       upload_artifact: true
 
   deploy:

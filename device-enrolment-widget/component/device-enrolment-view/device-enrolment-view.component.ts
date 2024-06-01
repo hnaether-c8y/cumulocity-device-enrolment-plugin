@@ -3,14 +3,14 @@ import { InventoryService } from '@c8y/client';
 import {
   ClipboardService,
 } from '@c8y/ngx-components';
-import { AssetPropertiesViewService } from './asset-properties-view.service';
+import { DeviceEnrolmentViewService } from './device-enrolment-view.service';
 
 
 @Component({
-  selector: 'c8y-asset-properties-view',
-  templateUrl: './asset-properties-view.component.html',
+  selector: 'c8y-device-enrolment-view',
+  templateUrl: './device-enrolment-view.component.html',
 })
-export class AssetPropertiesViewComponent implements OnInit {
+export class DeviceEnrolmentViewComponent implements OnInit {
   @Input() config: any;
   isLoading = true;
   codeDevice : string = '';
@@ -20,7 +20,7 @@ export class AssetPropertiesViewComponent implements OnInit {
 
   constructor(
     protected inventoryService: InventoryService,
-    private assetPropertiesViewService: AssetPropertiesViewService,
+    private assetPropertiesViewService: DeviceEnrolmentViewService,
     private clipboardService: ClipboardService,
   ) {}
 

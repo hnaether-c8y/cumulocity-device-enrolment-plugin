@@ -5,7 +5,7 @@ import { ROUTES } from 'cypress/constants/routes.constant';
 
 const propKey = 'color';
 const updatedPropValue = 'Blu';
-const propWidgetURL = 'apps/cumulocity-device-registration-widget/index.html#/';
+const propWidgetURL = 'apps/cumulocity-device-enrolment-widget/index.html#/';
 const dtmURL = 'apps/digital-twin-manager/index.html#/assets';
 const propValueElement = 'c8y-asset-properties-item > p';
 const propFeildElement = "input[type='text']";
@@ -169,7 +169,7 @@ describe('Asset Properties Widget: Integration tests', function () {
     cy.deleteAsset(assetName);
 
     cy.visitAndWaitUntilPageLoad(propWidgetURL);
-    cy.get('c8y-asset-properties-view > div').should('contain.text', 'No data');
+    cy.get('c8y-device-enrolment-view > div').should('contain.text', 'No data');
     cy.deleteCard();
   });
 

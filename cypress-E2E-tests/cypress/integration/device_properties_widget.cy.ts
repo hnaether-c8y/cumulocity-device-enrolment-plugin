@@ -3,7 +3,7 @@
 import asset_properties_widget_elements from '../support/page_objects/asset_properties_widget_elements';
 
 describe('Device properties widget', function () {
-  const url = 'apps/cumulocity-device-registration-widget/index.html#/';
+  const url = 'apps/cumulocity-device-enrolment-widget/index.html#/';
   const asset = 'Amazon';
   const device = 'Device1';
   const groupObject = {
