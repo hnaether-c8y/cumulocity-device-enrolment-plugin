@@ -1,0 +1,79 @@
+<div
+  class="card m-b-8"
+  title="{{ 'description' | translate }}"
+  [ngClass]="{ 'card-highlight': true }"
+>
+  <div class="card-block" [ngClass]="{ 'p-b-0': true }">
+    <div class="d-flex p-b-8 a-i-center">
+      <p
+        class="text-medium text-truncate"
+        title="{{ prop?.label | translate }}"
+        data-cy="asset-properties-label"
+      >
+        DeviceID
+      </p>
+    </div>
+    <div>
+      <input [(ngModel)]="externalId" />
+      <button (click)="generateCode()">Generate Code</button>
+    </div>
+  </div>
+
+  <div class="d-flex p-b-8 a-i-center" *ngIf="errorMessage">
+    <div class="text-medium text-truncate" style="color: red;">
+      {{ errorMessage }}
+    </div>
+  </div>
+
+  <div class="card-block" [ngClass]="{ 'p-b-0': true }">
+    <div class="d-flex p-b-8 a-i-center">
+      <p
+        class="text-medium text-truncate"
+        title="{{ prop?.label | translate }}"
+        data-cy="asset-properties-label"
+      >
+        🐳 Docker
+      </p>
+    </div>
+
+    <div class="d-flex p-b-8 a-i-center">
+      <p style="border: inset; background: lightgray; overflow: scroll; white-space: nowrap">{{ codeContainer || '-- code --' }}</p>
+      <button
+        class="btn btn-dot m-l-auto text-12"
+        [attr.aria-label]="'Copy' | translate"
+        data-cy="asset-properties-edit-icon"
+        type="button"
+        (click)="copyIt(codeContainer)"
+      >
+        <i c8yIcon="clipboard"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="card-block" [ngClass]="{ 'p-b-0': true }">
+    <div class="d-flex p-b-8 a-i-center">
+      <p
+        class="text-medium text-truncate"
+        title="{{ prop?.label | translate }}"
+        data-cy="asset-properties-label"
+      >
+        💻 Device
+      </p>
+    </div>
+
+    <div class="d-flex p-b-8 a-i-center">
+      <p style="border: inset; background: lightgray; overflow: scroll; white-space: nowrap">{{ codeDevice || '-- code --' }}</p>
+      <button
+        class="btn btn-dot m-l-auto text-12"
+        [attr.aria-label]="'Copy' | translate"
+        data-cy="asset-properties-edit-icon"
+        type="button"
+        (click)="copyIt(codeDevice)"
+      >
+        <i c8yIcon="clipboard"></i>
+      </button>
+    </div>
+  </div>
+
+</div>
+
