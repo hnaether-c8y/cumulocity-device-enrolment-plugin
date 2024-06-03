@@ -1,20 +1,18 @@
-# Cumulocity Asset Properties Widget Plugin [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-device-enrolment-widget/releases/download/cumulocity-device-enrolment-widget-1.0.1/cumulocity-device-enrolment-widget-1.0.1.zip)
+# Cumulocity Asset Properties Widget Plugin
 
-This Asset Properties Widget is the Cumulocity module federation plugin created using c8ycli. This plugin can be used in Application Builder or Cockpit. It fetches Inventory data based on the Asset or Devices and displays the same in a widget.
+The device enrolment widget is used to display device enrolment codes provided by the [c8y-token-syner](https://github.com/reubenmiller/c8y-token-syner) microservice.
+
+This plugin can be used in Device Management or Cockpit.
 
 ### Compatibility:
 
-| ASSET PROPERTIES WIDGET PLUGIN | CUMULOCITY |
+| DEVICE ENROLMENT WIDGET PLUGIN | CUMULOCITY |
 | ------------------------------ | ---------- |
-| 1.0.0                          | 1018.0.144 |
-
-![Asset-properties](images/asset-property-image.JPG)
+| 1.x.x                          | 1018.0.144 |
 
 ## Features
 
-- **Display Asset/Device list:** Displays Asset and Device list present in the tenant.
-
-- **Configurable Properties:** User can choose what properties to display and also option to display custom label for each property.
+- Generate device enrolment codes for onboarding thin-edge.io devices
 
 ## Prerequisites:
 
@@ -22,7 +20,7 @@ Cumulocity c8ycli >=1018.0.144
 
 ## Installation
 
-To install the Asset properties 2.0 widget plugin, you must add the plugin package to the extensions first and then install it on the desired custom application.
+To install the widget plugin, you must add the plugin package to the extensions first and then install it on the desired custom application.
 
 #### To add the plugin package to extensions
 
@@ -31,10 +29,10 @@ To install the Asset properties 2.0 widget plugin, you must add the plugin packa
 
 #### To install the widget plugin on a custom application
 
-1. Navigate Adminstration > Ecosystem > Applications
+1. Navigate Administration > Ecosystem > Applications
 2. Click application name to view the application details.
 3. Switch to **Plugins** tab, Click **Install plugins**
-4. In the resulting dialog, search for Asset properties 2.0 widget, click **Install**
+4. In the resulting dialog, search for Device enrolment widget, click **Install**
 
 To know more about extensions, see [Administration> Managing applications > Extensions](https://cumulocity.com/guides/users-guide/administration/#extensions) in _User guide_
 
@@ -57,13 +55,9 @@ This guide will teach you how to add widget in your existing or new dashboard.
 
 3. Click `Add Widget`
 
-4. Search for `Asset Properties 2.0`
+4. Search for `Device enrolment`
 
-5. Select `Target Asset` or `Target Device`
-
-6. Add Property by clicking `Add Property` button.
-
-7. Click `Save`
+5. Click `Save`
 
 Congratulations! Asset Properties is configured.
 
