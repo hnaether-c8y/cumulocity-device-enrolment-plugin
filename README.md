@@ -1,4 +1,4 @@
-# Cumulocity Asset Properties Widget Plugin
+# Cumulocity Device Enrolment Widget Plugin
 
 The device enrolment widget is used to display device enrolment codes provided by the [c8y-token-syner](https://github.com/reubenmiller/c8y-token-syner) microservice.
 
