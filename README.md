@@ -19,6 +19,7 @@ This plugin can be used in Device Management or Cockpit.
 Cumulocity c8ycli >=1018.0.144
 
 ## Installation
+Run npm install --legacy-peer-deps. Use node 14.
 
 To install the widget plugin, you must add the plugin package to the extensions first and then install it on the desired custom application.
 
