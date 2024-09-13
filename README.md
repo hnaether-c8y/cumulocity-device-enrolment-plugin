@@ -1,7 +1,8 @@
-# Cumulocity Device Enrolment Widget Plugin
+# Cumulocity Device Enrolment Widget Plugin + Wizard
 
-The device enrolment widget is used to display device enrolment codes provided by the [c8y-token-syner](https://github.com/reubenmiller/c8y-token-syner) microservice.
+This fork is intended to replace the widget with a good looking wizard. It should hook to the Quick links widget in either Cockpit or Device management Home Dashboard.
 
+The device enrolment is used to display device enrolment codes provided by the [c8y-token-syner](https://github.com/reubenmiller/c8y-token-syner) microservice.
 This plugin can be used in Device Management or Cockpit.
 
 ### Compatibility:
@@ -56,7 +57,7 @@ This guide will teach you how to add widget in your existing or new dashboard.
 
 3. Click `Add Widget`
 
-4. Search for `Device enrolment`
+4. Search for `Device enrolment` - you will find the deprecated widget and the new stepper
 
 5. Click `Save`
 
