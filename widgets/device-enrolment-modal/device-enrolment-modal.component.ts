@@ -105,7 +105,7 @@ export class DeviceEnrolmentModalComponent implements AfterViewInit, OnDestroy {
     if (this.container) {
       this.renderer.setStyle(this.container.nativeElement, 'display', 'block');
     }
-    this.stepper.selectedIndex = 2;
+    this.generateCode();
   }
 
   onFailure() {
@@ -123,7 +123,7 @@ export class DeviceEnrolmentModalComponent implements AfterViewInit, OnDestroy {
       const data = await this.assetPropertiesViewService.getRegistrationCode(this.externalId);
       this.isCodeRequestPending = false;
       if (data['error']) {
-        this.errorMessage = data['error'];
+        this.errorMessage = JSON.stringify(data);
         this.codeDevice = '';
         this.codeContainer = '';
         this.success = false;

@@ -311,7 +311,7 @@
     </cdk-step>
     <cdk-step [label]="generateCodeTitle">
       <div class="p-l-24 p-r-24">
-        <div>
+        <div *ngIf="errorMessage?.length === 0">
           <div
             class="h4 text-center m-b-8 animated fadeInDown"
             style="animation-delay: 0.3s"
@@ -389,6 +389,7 @@
           once you have copied the code.
         </p>
       </div>
+
       </div>
       <div class="modal-footer d-block bg-component separator-top sticky-bottom">
         <button
@@ -425,7 +426,7 @@
   </c8y-stepper>
 
   <!-- SUCCESS CONTAINER -->
-  <ng-container *ngIf="success === true">
+  <ng-container *ngIf="success">
     <div
       class="overflow-hidden"
       style="height: 400px"
@@ -639,14 +640,6 @@
             >
               {{ 'Close' | translate }}
             </button>
-            <button
-              class="btn btn-primary"
-              title="{{ 'Open dashboard' | translate }}"
-              type="button"
-              (click)="openDashboard()"
-            >
-              {{ 'Open dashboard' | translate }}
-            </button>
           </span>
         </div>
       </div>
@@ -824,34 +817,28 @@
             </defs>
           </svg>
         </div>
-        <div class="col-xs-6 p-r-24 a-s-center">
+
+        <div class="col-xs-6 p-r-24 a-s-center" *ngIf="!success && errorMessage?.length">
           <h4
             class="m-b-8 animated fadeInUp"
             style="animation-delay: 0.5s"
           >
-            <strong>{{ 'Device enrolment unsuccessful' | translate }}</strong>
+            <strong>{{ 'Code Generation unsuccessful' | translate }}</strong>
           </h4>
           <div
             class="animated fadeInUp"
             style="animation-delay: 0.75s"
           >
             {{ 'The following error occurred:' | translate }}
-            <pre>
-              {{ errorMessage | json }}
-            </pre>
+            <div class="card-inner-scroll">
+              <pre style="min-height: 40px"><code class="m-4" style="vertical-align: -webkit-baseline-middle;">{{ errorMessage }}</code></pre>
+            </div>
+          
           </div>
           <span
             class="text-center animated fadeInUp"
             style="animation-delay: 1s"
           >
-            <button
-              class="btn btn-default"
-              title="{{ 'Close' | translate }}"
-              type="button"
-              (click)="cancel()"
-            >
-              {{ 'Close' | translate }}
-            </button>
             <button
               class="btn btn-primary"
               title="{{ 'Retry' | translate }}"
@@ -862,6 +849,7 @@
             </button>
           </span>
         </div>
+       
       </div>
     </div>
   </ng-container>
